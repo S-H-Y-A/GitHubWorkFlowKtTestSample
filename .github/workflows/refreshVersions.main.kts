@@ -21,7 +21,7 @@ import it.krzeminski.githubactions.yaml.writeToFile
 
 private val everyMondayAt7am = Cron(minute = "0", hour = "7", dayWeek = "1")
 
-val masterBranch = "main"
+val masterBranch = "master"
 val newBranch = "dependency-update"
 val commitMessage = "Refresh libs.versions.toml and versions.properties"
 val prTitle = "Upgrade gradle dependencies"
