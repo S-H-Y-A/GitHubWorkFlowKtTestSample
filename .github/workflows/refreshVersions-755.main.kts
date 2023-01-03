@@ -1,5 +1,5 @@
 #!/usr/bin/env kotlin
-// Usage: $ .github/workflows/refreshVersions.main.kts
+// Usage: $ .github/workflows/refreshVersions-755.main.kts
 
 @file:DependsOn("it.krzeminski:github-actions-kotlin-dsl:0.33.0")
 
@@ -33,7 +33,7 @@ val javaSetup = SetupJavaV3(
 )
 
 val workflowRefreshVersions: Workflow = workflow(
-    name = "RefreshVersions",
+    name = "RefreshVersions-755",
     on = listOf(
         Schedule(listOf(everyMondayAt7am)),
         WorkflowDispatch(),
@@ -41,7 +41,7 @@ val workflowRefreshVersions: Workflow = workflow(
     sourceFile = __FILE__.toPath(),
 ) {
     job(
-        id = "Refresh-Versions",
+        id = "Refresh-Versions-755",
         runsOn = RunnerType.UbuntuLatest,
     ) {
         uses(
